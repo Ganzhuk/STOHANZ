@@ -13,8 +13,9 @@ namespace STOHANZ.Models
         public Category CategoryId { get; set; }
         public Master MasterId { get; set; }
         public Car CarId { get; set; }
+        public decimal Price { get; set; }
 
-        public Service(Service ServiceId_, string Name_, string Description_, Category CategoryId_, Master MasterId_, Car CarId_)
+        public Service(Service ServiceId_, string Name_, string Description_, Category CategoryId_, Master MasterId_, Car CarId_, decimal Price_)
         {
             this.ServiceId = ServiceId_;
             this.Name = Name_;
