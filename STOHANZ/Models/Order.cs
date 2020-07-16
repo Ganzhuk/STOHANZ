@@ -8,7 +8,7 @@ namespace STOHANZ.Models
     public class Order
     {
         public int OrderId { get; set; }
-        public Good Good_Id { get; set; }
+        public virtual Good Good_Id { get; set; }
         public decimal Price { get; set; }
 
         public Order()

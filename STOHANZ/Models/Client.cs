@@ -12,7 +12,7 @@ namespace STOHANZ.Models
         public string Phone { get; set; }
         public string Adress { get; set; }
         public bool Status { get; set; }
-        public Cart Cart_Id { get; set; }
+        public virtual Cart Cart_Id { get; set; }
 
         public Client()
         {

@@ -11,7 +11,7 @@ namespace STOHANZ.Models
         public int CartId { get; set; }
         public string SessionKey { get; set; }
         public decimal Price { get; set; }
-        public Service Service_ServiceId { get; set; }
+        public virtual Service Service_ServiceId { get; set; }
         public Cart() { }
         public Cart(int CartId_, string SessionKey_, decimal Price_, Service Service_ServiceId_)
         {
@@ -35,7 +35,7 @@ namespace STOHANZ.Models
     }
     public class CartLine
     {
-        public Service Service { get; set; }
+        public virtual Service Service { get; set; }
         public int Quantity { get; set; }
     }
 }
