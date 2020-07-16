@@ -6,7 +6,7 @@ using System.Web;
 
 namespace STOHANZ.Models
 {
-    public class EFDbContext: DbContext
+    public class EFDbContext : DbContext
     {
         public DbSet<Car> Cars { get; set; }
         public DbSet<Cart> Carts { get; set; }
@@ -16,6 +16,5 @@ namespace STOHANZ.Models
         public DbSet<Master> Masters { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Service> Services { get; set; }
-
     }
 }

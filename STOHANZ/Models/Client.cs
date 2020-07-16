@@ -7,14 +7,17 @@ namespace STOHANZ.Models
 {
     public class Client
     {
-        public Client ClientId { get; set; }
+        public int ClientId { get; set; }
         public string Fio { get; set; }
         public string Phone { get; set; }
         public string Adress { get; set; }
         public bool Status { get; set; }
-        public int Cart_Id { get; set; }
+        public Cart Cart_Id { get; set; }
 
-        public Client(Client ClientId_, string Fio_, string Phone_, string Adress_, bool Status_, int Cart_Id_)
+        public Client()
+        {
+        }
+        public Client(int ClientId_, string Fio_, string Phone_, string Adress_, bool Status_, Cart Cart_Id_)
         {
             this.ClientId = ClientId_;
             this.Fio = Fio_;
@@ -23,5 +26,15 @@ namespace STOHANZ.Models
             this.Status = Status_;
             this.Cart_Id = Cart_Id_;
         }
+        public virtual IEnumerable<OrderLine> OrderLines { get; set; }
+    }
+    public class OrderLine
+    {
+        public int OrderLineId { get; set; }
+        public Client Client { get; set; }
+        public Good Good { get; set; }
+        public Service Service { get; set; }
+        public int Quantity { get; set; }
+
     }
 }

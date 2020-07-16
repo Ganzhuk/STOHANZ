@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="STOHanz.master.cs" Inherits="STOHANZ.Pages.STOHanz" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="../Content/Styles.css" />
+    <title>STO</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <div class="title">STO - магазин игр для тебя</div>
+        </div>
+        <div id="categories">
+            <GS:CategoryLinks runat="server" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="bodyContent" runat="server"/>
+        </div>
+    </form>
+</body>
+</html>

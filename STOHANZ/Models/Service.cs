@@ -7,7 +7,7 @@ namespace STOHANZ.Models
 {
     public class Service
     {
-        public Service ServiceId { get; set; }
+        public int ServiceId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Category CategoryId { get; set; }
@@ -15,7 +15,11 @@ namespace STOHANZ.Models
         public Car CarId { get; set; }
         public decimal Price { get; set; }
 
-        public Service(Service ServiceId_, string Name_, string Description_, Category CategoryId_, Master MasterId_, Car CarId_, decimal Price_)
+        public Service()
+        {
+        }
+
+        public Service(int ServiceId_, string Name_, string Description_, Category CategoryId_, Master MasterId_, Car CarId_, decimal Price_)
         {
             this.ServiceId = ServiceId_;
             this.Name = Name_;
